@@ -9,5 +9,19 @@
 </head>
 <body>
 	<h1>구구단</h1>
+	<script>
+		for(let i=2; i<=9; i++){
+			document.write('<div>');
+			document.write(`<h3>${i}단</h3>`);
+			
+			for(let k=1; k<=9; k++){
+				let res = i * k;
+				document.write(
+					`${i}X${k}=${res}<br>`
+				)
+			}
+			document.write('</div>');
+		}
+	</script>
 </body>
 </html>
