@@ -10,7 +10,14 @@
 	<h2>짝수일까, 홀수일까</h2>
 
 	<script>
-	
+		
+		const num = prompt('숫자를 입력하시오.');
+		isOdd(num)? document.write(`${num}는(은) 홀수입니다.`)
+					: document.write(`${num}는(은) 짝수입니다.`);
+		function isOdd(n){
+			return n%2 ? true
+						: false;
+		}
 	</script>
 </body>
 </html>

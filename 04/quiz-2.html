@@ -14,5 +14,22 @@
 </head>
 <body>
 	<h2>3의 배수 찾기</h2>
+	<script>
+		const divisor = 3;
+		const range = 100;
+		let count = 0;
+		for(let i=1; i<=range; i++){
+			if(isDivided(i, divisor)) {
+				document.write(`${i}, `);
+				count += 1;
+			}
+		}
+		document.write(`<br>${divisor}의 배수의 갯수는: ${count}`);	
+		
+		function isDivided(n, q){
+			return n % q? false
+						: true;
+		}
+	</script>
 </body>
 </html>
