@@ -7,6 +7,18 @@
 	<title>직접 만들어 보는 함수</title>
 </head>
 <body>
+	<script>
+		add = function(a, b){
+			let sum = a+b;
+			return sum;
+		}
+		let num1 = parseInt(prompt('첫번째 숫자를 입력하시오.'));
+		let num2 = parseInt(prompt('두번째 숫자를 입력하시오.'));
+
+		let result = add(num1, num2);
+		document.write(`<p>두 수의 합은 ${result}이다.</p>`);
+
+	</script>
 
 </body>
 </html>
