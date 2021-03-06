@@ -9,8 +9,26 @@
 	</style>
 </head>
 <body>
+	
 	<script>
 		var r = prompt("원의 반지름은? (cm)");
+		function makeCircle(radius){
+			let r = radius;
+			return {
+				circumference(){
+					return Math.floor(2 * r * Math.PI);
+				},
+				area(){
+					return Math.floor(Math.PI * (r**2));
+				}
+
+			};
+
+		}
+		const circle1 = makeCircle(parseFloat(r));
+		document.write(`<p>반지름이 ${r}cm일 때</p>`);
+		document.write(`<p>원의 둘레 : ${circle1.circumference()}cm</p>`);
+		document.write(`<p>원의 넓이 : ${circle1.area()}cm<sup>2</sup></p>`);
 	
 	</script>
 </body>

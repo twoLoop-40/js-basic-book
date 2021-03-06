@@ -13,6 +13,11 @@ function timeDifference(d1, d2){
     let t2 = d2.getTime();
     return Math.abs(t1-t2);
 }
+// (Date, Date) -> day
+function timePassed(d1, d2){
+    const time = timeDifference(d1, d2);
+    return millisecToDay(time);
+}
 
 // (day) -> millisec
 function daysToMillisec(day){
@@ -58,5 +63,5 @@ setValue('#date100', dateToStr(dates['d100']));
 setValue('#date200', dateToStr(dates['d200']));
 setValue('#date365', dateToStr(dates['y1']));
 setValue('#date500', dateToStr(dates['d500']));
-
+setValue('#accent', `${timePassed(firstDate, dates.today)}일`);
 
